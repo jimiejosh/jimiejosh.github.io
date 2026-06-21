@@ -714,6 +714,28 @@
       margin-bottom: 0.75rem;
     }
 
+    .experience-media {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.15rem;
+      flex-wrap: wrap;
+    }
+
+    .experience-media img {
+      height: 84px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+    }
+
+    .experience-media img:hover {
+      transform: scale(1.04);
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(0, 212, 170, 0.2);
+    }
+
     @media (max-width: 576px) {
       .experience-card {
         flex-direction: column;
@@ -1325,16 +1347,21 @@
           <div class="experience-card reveal" style="--i:1">
             <img src="logo_playit.png" alt="Play Information Technology Logo" class="experience-logo" loading="lazy">
             <div class="experience-body">
-              <span class="experience-meta">2019 - Jan 2024 · Lagos, Nigeria</span>
+              <span class="experience-meta">2019 - Jan 2024 · Lagos State, Nigeria</span>
               <h3 class="experience-role">Fullstack Game Developer / Co-Founder</h3>
               <div class="experience-company">Play Information Technology (Play Inc. Games)</div>
-              <p>Co-founded and engineered gaming platforms, designing fullstack gameplay and multiplayer backend integrations for Play Inc. Games.</p>
+              <p>Co-founded and engineered gaming platforms, designing fullstack gameplay, multiplayer backend integrations, and web services for Play Inc. Games.</p>
               <div class="tag-row" style="margin-top: 1rem;">
                 <span class="tag">Node.js</span>
                 <span class="tag">JavaScript</span>
                 <span class="tag">Fullstack Game Dev</span>
                 <span class="tag">Graphics Design</span>
                 <span class="tag">Co-Founder</span>
+              </div>
+              <!-- Media Showcase -->
+              <div class="experience-media">
+                <img src="playit_media_1.png" alt="Play IT Game Showcase 1" title="Play IT Game Showcase 1">
+                <img src="playit_media_2.png" alt="Play IT Game Showcase 2" title="Play IT Game Showcase 2">
               </div>
             </div>
           </div>
@@ -1357,8 +1384,57 @@
             </div>
           </div>
 
-          <!-- Seecure Space -->
+          <!-- Eunoia Ventures -->
           <div class="experience-card reveal" style="--i:3">
+            <img src="logo_eunoia.png" alt="Eunoia Ventures Logo" class="experience-logo" loading="lazy">
+            <div class="experience-body">
+              <span class="experience-meta">May 2020 - Sep 2021 · Singapore (Contract)</span>
+              <h3 class="experience-role">Fullstack Developer / Consultant</h3>
+              <div class="experience-company">
+                <a href="https://eunoia.ventures/" target="_blank" rel="noopener" class="text-link" style="font-size: 1rem; font-family: var(--font-heading);">
+                  Eunoia Ventures <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+                </a>
+              </div>
+              <p>Contract Fullstack Developer and Technical Consultant for Eunoia Ventures, collaborating on integration architectures, backend systems, and web application implementations.</p>
+              <div class="tag-row" style="margin-top: 1rem;">
+                <span class="tag">Fullstack</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Integration</span>
+                <span class="tag">Consulting</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- WolfPack's MarketHacks -->
+          <div class="experience-card reveal" style="--i:4">
+            <img src="logo_wolfpack.png" alt="WolfPack's MarketHacks Logo" class="experience-logo" loading="lazy">
+            <div class="experience-body">
+              <span class="experience-meta">Jul 2020 - Apr 2021 · Mumbai, Maharashtra, India (Contract)</span>
+              <h3 class="experience-role">Front-End Development</h3>
+              <div class="experience-company">
+                <a href="https://wpmarkethacks.com/" target="_blank" rel="noopener" class="text-link" style="font-size: 1rem; font-family: var(--font-heading);">
+                  WolfPack’s MarketHacks Pvt LTD <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+                </a>
+              </div>
+              <p>Contract Front-End Developer for WolfPack's MarketHacks, building Vantage Point Investment Solutions and other financial advisory portals with highly responsive frontend components and custom user interfaces.</p>
+              <div class="tag-row" style="margin-top: 1rem;">
+                <span class="tag">React</span>
+                <span class="tag">Frontend</span>
+                <span class="tag">Vantage Point</span>
+                <span class="tag">UI/UX</span>
+              </div>
+              <!-- Media Showcase -->
+              <div class="experience-media">
+                <div style="display:flex; flex-direction:column; gap:0.25rem;">
+                  <img src="wolfpack_media_1.png" alt="Vantage Point Investment Solutions" title="Vantage Point Investment Solutions">
+                  <span style="font-size:0.72rem; color:var(--muted); font-weight:600;">Vantage Point Investment Solutions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seecure Space -->
+          <div class="experience-card reveal" style="--i:5">
             <img src="logo_seecure.png" alt="Seecure Space Logo" class="experience-logo" loading="lazy">
             <div class="experience-body">
               <span class="experience-meta">2020 - 2020 · Kenya (Remote)</span>
@@ -1371,24 +1447,6 @@
                 <span class="tag">Scrum</span>
                 <span class="tag">Project Planning</span>
                 <span class="tag">Cross-functional Leadership</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Fullstack Developer / Consultant -->
-          <div class="experience-card reveal" style="--i:4">
-            <div class="experience-logo-placeholder"><i class="fa-solid fa-code"></i></div>
-            <div class="experience-body">
-              <span class="experience-meta">May 2020 - Sep 2021 · Singapore &amp; India (Remote)</span>
-              <h3 class="experience-role">Fullstack Developer / Consultant</h3>
-              <div class="experience-company">International Software Consulting</div>
-              <p>Collaborated on remote software development projects for international clients in the UK, USA, Singapore, and India (including front-end development in Mumbai), delivering high-performance web applications and integration architectures.</p>
-              <div class="tag-row" style="margin-top: 1rem;">
-                <span class="tag">TypeScript</span>
-                <span class="tag">React</span>
-                <span class="tag">Platform Integration</span>
-                <span class="tag">API Design</span>
-                <span class="tag">Software Development</span>
               </div>
             </div>
           </div>
