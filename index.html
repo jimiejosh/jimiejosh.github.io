@@ -5,16 +5,65 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Seye Folajimi · Strategy, AI & Engineering</title>
-  <meta name="description" content="Seye Folajimi builds thoughtful products at the intersection of strategy, AI, software engineering, and growth.">
+  <meta name="description" content="Seye Folajimi is a business leader, technical strategist, software engineer, AI solutions consultant, speaker, researcher, and writer building useful digital products.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Seye Folajimi, JimieJosh, AI solutions, software engineering, product strategy, DevOps, technical consultant, speaker, writer">
+  <meta name="author" content="Seye Folajimi">
   <meta name="theme-color" content="#f7f4ef">
-  <meta property="og:title" content="Seye Folajimi">
-  <meta property="og:description" content="Business leader, strategist, technical consultant, software engineer, speaker, researcher, and writer.">
+  <link rel="canonical" href="https://jimiejosh.github.io/">
+  <meta property="og:site_name" content="Seye Folajimi">
+  <meta property="og:title" content="Seye Folajimi · Strategy, AI & Engineering">
+  <meta property="og:description" content="Business leader, strategist, technical consultant, software engineer, speaker, researcher, and writer building products across AI, engineering, and growth.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jimiejosh.github.io/">
+  <meta property="og:image" content="https://jimiejosh.github.io/android-chrome-512x512.png">
+  <meta property="og:image:alt" content="Seye Folajimi portfolio icon">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@jimiejosh">
+  <meta name="twitter:creator" content="@jimiejosh">
+  <meta name="twitter:title" content="Seye Folajimi · Strategy, AI & Engineering">
+  <meta name="twitter:description" content="Technical strategist and software engineer building useful products across AI, DevOps, research, and growth.">
+  <meta name="twitter:image" content="https://jimiejosh.github.io/android-chrome-512x512.png">
+  <link rel="me" href="https://medium.com/@jimiejosh">
+  <link rel="me" href="https://github.com/JimieJosh">
+  <link rel="me" href="https://ng.linkedin.com/in/folajimi-seye-b5516399">
+  <link rel="me" href="https://about.me/seye.folajimi">
+  <link rel="me" href="https://stackoverflow.com/users/8560668/folajimi-seye">
+  <link rel="me" href="https://youtube.com/@iamjimiejosh">
+  <link rel="me" href="https://www.facebook.com/jimiejoshpage">
+  <link rel="me" href="https://instagram.com/jimiejosh">
+  <link rel="me" href="https://twitter.com/jimiejosh">
+  <link rel="me" href="https://g.dev/seyefolajimi">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Seye Folajimi",
+      "alternateName": "JimieJosh",
+      "url": "https://jimiejosh.github.io/",
+      "email": "mailto:joshjimie@gmail.com",
+      "jobTitle": "Business Leader, Technical Strategist and Software Engineer",
+      "description": "Seye Folajimi builds thoughtful products at the intersection of strategy, AI, software engineering, DevOps, research, and growth.",
+      "sameAs": [
+        "https://medium.com/@jimiejosh",
+        "https://jimiejosh.github.io/",
+        "https://github.com/JimieJosh",
+        "https://ng.linkedin.com/in/folajimi-seye-b5516399",
+        "https://about.me/seye.folajimi",
+        "https://stackoverflow.com/users/8560668/folajimi-seye",
+        "https://youtube.com/@iamjimiejosh",
+        "https://www.facebook.com/jimiejoshpage",
+        "https://instagram.com/jimiejosh",
+        "https://twitter.com/jimiejosh",
+        "https://g.dev/seyefolajimi"
+      ]
+    }
+  </script>
   <style>
     :root {
       color-scheme: light dark;
@@ -22,8 +71,9 @@
       --text: #151515;
       --muted: #68625b;
       --line: rgba(21, 21, 21, 0.12);
-      --card: rgba(255, 255, 255, 0.58);
+      --card: rgba(255, 255, 255, 0.62);
       --accent: #0f766e;
+      --accent-strong: #115e59;
       --shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
@@ -37,6 +87,7 @@
     html {
       min-height: 100%;
       background: var(--bg);
+      scroll-behavior: smooth;
     }
 
     body {
@@ -50,16 +101,44 @@
         radial-gradient(circle at bottom right, rgba(20, 20, 20, 0.08), transparent 30rem),
         var(--bg);
       line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      width: 18rem;
+      height: 18rem;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.12);
+      filter: blur(0.5rem);
+      animation: float-orb 14s ease-in-out infinite alternate;
+    }
+
+    body::before {
+      top: 8%;
+      right: 8%;
+    }
+
+    body::after {
+      bottom: 6%;
+      left: 6%;
+      width: 12rem;
+      height: 12rem;
+      animation-delay: -6s;
     }
 
     main {
-      width: min(100%, 58rem);
+      width: min(100%, 64rem);
       padding: clamp(1.35rem, 5vw, 3.5rem);
       border: 1px solid var(--line);
       border-radius: 2rem;
       background: var(--card);
       box-shadow: var(--shadow);
       backdrop-filter: blur(22px);
+      animation: reveal 760ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
     }
 
     .eyebrow {
@@ -72,6 +151,7 @@
       font-weight: 650;
       letter-spacing: 0.18em;
       text-transform: uppercase;
+      animation: slide-up 580ms 120ms both;
     }
 
     .eyebrow::before {
@@ -81,6 +161,7 @@
       border-radius: 999px;
       background: var(--accent);
       box-shadow: 0 0 0 0.45rem rgba(15, 118, 110, 0.12);
+      animation: pulse 2.4s ease-in-out infinite;
     }
 
     h1 {
@@ -89,14 +170,16 @@
       font-weight: 760;
       letter-spacing: -0.09em;
       line-height: 0.86;
+      animation: slide-up 640ms 200ms both;
     }
 
     .intro {
-      max-width: 42rem;
+      max-width: 44rem;
       margin-top: clamp(1.5rem, 4vw, 2.25rem);
       color: var(--muted);
       font-size: clamp(1.1rem, 2.5vw, 1.55rem);
       letter-spacing: -0.035em;
+      animation: slide-up 640ms 280ms both;
     }
 
     .focus {
@@ -105,6 +188,7 @@
       gap: 0.6rem;
       margin: clamp(2rem, 5vw, 3rem) 0;
       list-style: none;
+      animation: slide-up 640ms 360ms both;
     }
 
     .focus li {
@@ -119,9 +203,14 @@
 
     .links {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
       gap: 0.75rem;
       list-style: none;
+    }
+
+    .links li {
+      animation: slide-up 520ms both;
+      animation-delay: calc(420ms + (var(--item-index) * 45ms));
     }
 
     .links a {
@@ -136,13 +225,14 @@
       text-decoration: none;
       font-size: 0.96rem;
       font-weight: 650;
-      transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+      transition: border-color 180ms ease, transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
     }
 
     .links a::after {
       content: "↗";
       color: var(--muted);
       font-weight: 500;
+      transition: color 180ms ease, transform 180ms ease;
     }
 
     .links a[href^="mailto:"]::after {
@@ -152,9 +242,60 @@
     .links a:hover,
     .links a:focus-visible {
       border-color: rgba(15, 118, 110, 0.45);
-      background: rgba(255, 255, 255, 0.42);
-      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.46);
+      box-shadow: 0 14px 38px rgba(15, 118, 110, 0.12);
+      transform: translateY(-3px);
       outline: none;
+    }
+
+    .links a:hover::after,
+    .links a:focus-visible::after {
+      color: var(--accent-strong);
+      transform: translate(2px, -2px);
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: scale(0.98);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slide-up {
+      from {
+        opacity: 0;
+        transform: translateY(1rem);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0.45rem rgba(15, 118, 110, 0.12);
+      }
+
+      50% {
+        box-shadow: 0 0 0 0.75rem rgba(15, 118, 110, 0.05);
+      }
+    }
+
+    @keyframes float-orb {
+      from {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+
+      to {
+        transform: translate3d(1.4rem, -1.2rem, 0) scale(1.08);
+      }
     }
 
     @media (prefers-color-scheme: dark) {
@@ -163,8 +304,9 @@
         --text: #f3f0ea;
         --muted: #aaa39a;
         --line: rgba(243, 240, 234, 0.14);
-        --card: rgba(18, 20, 20, 0.68);
+        --card: rgba(18, 20, 20, 0.72);
         --accent: #5eead4;
+        --accent-strong: #99f6e4;
         --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
       }
 
@@ -172,6 +314,17 @@
       .links a:hover,
       .links a:focus-visible {
         background: rgba(255, 255, 255, 0.05);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 1ms !important;
       }
     }
 
@@ -206,13 +359,18 @@
     </ul>
 
     <ul class="links" aria-label="Contact and profile links">
-      <li><a href="mailto:joshjimie@gmail.com">Email</a></li>
-      <li><a href="https://github.com/jimiejosh" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-      <li><a href="https://twitter.com/jimiejosh" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-      <li><a href="https://www.linkedin.com/in/folajimi-seye-b5516399/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      <li><a href="https://jimiejosh.com" target="_blank" rel="noopener noreferrer">Website</a></li>
-      <li><a href="https://g.dev/seyefolajimi" target="_blank" rel="noopener noreferrer">Google Dev</a></li>
-      <li><a href="https://positive.ng" target="_blank" rel="noopener noreferrer">Positive.ng</a></li>
+      <li style="--item-index: 0"><a href="mailto:joshjimie@gmail.com">Email</a></li>
+      <li style="--item-index: 1"><a href="https://medium.com/@jimiejosh" target="_blank" rel="me noopener noreferrer">Medium</a></li>
+      <li style="--item-index: 2"><a href="https://jimiejosh.github.io/" rel="me">Portfolio</a></li>
+      <li style="--item-index: 3"><a href="https://github.com/JimieJosh" target="_blank" rel="me noopener noreferrer">GitHub</a></li>
+      <li style="--item-index: 4"><a href="https://ng.linkedin.com/in/folajimi-seye-b5516399" target="_blank" rel="me noopener noreferrer">LinkedIn</a></li>
+      <li style="--item-index: 5"><a href="https://about.me/seye.folajimi" target="_blank" rel="me noopener noreferrer">About.me</a></li>
+      <li style="--item-index: 6"><a href="https://stackoverflow.com/users/8560668/folajimi-seye" target="_blank" rel="me noopener noreferrer">Stack Overflow</a></li>
+      <li style="--item-index: 7"><a href="https://youtube.com/@iamjimiejosh" target="_blank" rel="me noopener noreferrer">YouTube</a></li>
+      <li style="--item-index: 8"><a href="https://www.facebook.com/jimiejoshpage" target="_blank" rel="me noopener noreferrer">Facebook</a></li>
+      <li style="--item-index: 9"><a href="https://instagram.com/jimiejosh" target="_blank" rel="me noopener noreferrer">Instagram</a></li>
+      <li style="--item-index: 10"><a href="https://twitter.com/jimiejosh" target="_blank" rel="me noopener noreferrer">Twitter</a></li>
+      <li style="--item-index: 11"><a href="https://g.dev/seyefolajimi" target="_blank" rel="me noopener noreferrer">Google Dev</a></li>
     </ul>
   </main>
 </body>
