@@ -18,7 +18,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Seye Folajimi · Strategy, AI &amp; Engineering">
   <meta property="og:description" content="Business leader and technical strategist building useful, resilient digital products across AI, software engineering, DevOps, research, and growth.">
-  <meta property="og:image" content="https://assets.about.me/background/users/s/e/y/seye.folajimi_1616531975_154.jpg">
+  <meta property="og:image" content="https://jimiejosh.github.io/avatar.jpg">
   <meta property="og:url" content="https://jimiejosh.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Seye Folajimi Portfolio">
@@ -28,7 +28,7 @@
   <meta name="twitter:creator" content="@jimiejosh">
   <meta name="twitter:title" content="Seye Folajimi · Strategy, AI &amp; Engineering">
   <meta name="twitter:description" content="Business leader and technical strategist building useful, resilient digital products across AI, software engineering, DevOps, research, and growth.">
-  <meta name="twitter:image" content="https://assets.about.me/background/users/s/e/y/seye.folajimi_1616531975_154.jpg">
+  <meta name="twitter:image" content="https://jimiejosh.github.io/avatar.jpg">
 
   <!-- rel=me for IndieWeb / identity verification -->
   <link rel="me" href="mailto:joshjimie@gmail.com">
@@ -56,7 +56,7 @@
     "@type": "Person",
     "name": "Seye Folajimi",
     "url": "https://jimiejosh.github.io",
-    "image": "https://assets.about.me/background/users/s/e/y/seye.folajimi_1616531975_154.jpg",
+    "image": "https://jimiejosh.github.io/avatar.jpg",
     "jobTitle": "Technical Strategist & AI Solutions Consultant",
     "description": "Business leader and technical strategist building useful, resilient digital products across AI, software engineering, DevOps, research, and growth.",
     "sameAs": [
@@ -641,6 +641,91 @@
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     }
 
+    /* Experience Stack & Cards styling */
+    .experience-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .experience-card {
+      display: flex;
+      gap: 1.75rem;
+      align-items: flex-start;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(22, 27, 34, 0.9), rgba(22, 27, 34, 0.65));
+      padding: 2rem;
+      transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+    }
+
+    .experience-card:hover {
+      border-color: rgba(0, 212, 170, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .experience-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      flex-shrink: 0;
+    }
+
+    .experience-logo-placeholder {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .experience-body {
+      flex: 1;
+    }
+
+    .experience-meta {
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .experience-role {
+      font-size: 1.35rem;
+      margin: 0.25rem 0;
+      font-weight: 700;
+    }
+
+    .experience-company {
+      color: var(--accent-light);
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 576px) {
+      .experience-card {
+        flex-direction: column;
+        gap: 1.15rem;
+        padding: 1.5rem;
+      }
+      .experience-logo, .experience-logo-placeholder {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
     .project-card h3 {
       font-size: 1.25rem;
       margin-bottom: 0.5rem;
@@ -1040,28 +1125,13 @@
     </div>
   </nav>
 
-  <!-- ======== SOCIAL SIDEBAR ======== -->
-  <ul class="social-sidebar" id="social-sidebar" role="list" aria-label="Social links">
-    <li><a href="mailto:joshjimie@gmail.com" aria-label="Email" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a></li>
-    <li><a href="https://github.com/JimieJosh" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a></li>
-    <li><a href="https://ng.linkedin.com/in/folajimi-seye-b5516399" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a></li>
-    <li><a href="https://twitter.com/jimiejosh" aria-label="X / Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a></li>
-    <li><a href="https://medium.com/@jimiejosh" aria-label="Medium" target="_blank" rel="noopener"><i class="fa-brands fa-medium"></i></a></li>
-    <li><a href="https://youtube.com/@iamjimiejosh" aria-label="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
-    <li><a href="https://instagram.com/jimiejosh" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
-    <li><a href="https://www.facebook.com/jimiejoshpage" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a></li>
-    <li><a href="https://stackoverflow.com/users/8560668/folajimi-seye" aria-label="Stack Overflow" target="_blank" rel="noopener"><i class="fa-brands fa-stack-overflow"></i></a></li>
-    <li><a href="https://g.dev/seyefolajimi" aria-label="Google Dev" target="_blank" rel="noopener"><i class="fa-brands fa-google"></i></a></li>
-    <li><a href="https://about.me/seye.folajimi" aria-label="About.me" target="_blank" rel="noopener"><i class="fa-solid fa-user"></i></a></li>
-  </ul>
-
   <main>
     <!-- ======== HERO ======== -->
     <section class="hero section" id="hero" aria-label="Hero">
       <div class="avatar-wrap">
         <img
           class="avatar"
-          src="https://assets.about.me/background/users/s/e/y/seye.folajimi_1616531975_154.jpg"
+          src="avatar.jpg"
           alt="Seye Folajimi — portrait photo"
           width="200"
           height="200"
@@ -1072,6 +1142,22 @@
       <p class="hero-title">Strategy, AI &amp; Engineering</p>
       <p class="hero-tagline">Think · Create · Inspire</p>
       <p class="hero-bio">Business leader and technical strategist building useful, resilient digital products across AI, software engineering, DevOps, research, and growth.</p>
+      
+      <!-- ======== SOCIAL SIDEBAR (Fixed on desktop, horizontal list inside Hero on mobile) ======== -->
+      <ul class="social-sidebar" id="social-sidebar" role="list" aria-label="Social links">
+        <li><a href="mailto:joshjimie@gmail.com" aria-label="Email" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href="https://github.com/JimieJosh" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://ng.linkedin.com/in/folajimi-seye-b5516399" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <li><a href="https://twitter.com/jimiejosh" aria-label="X / Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a></li>
+        <li><a href="https://medium.com/@jimiejosh" aria-label="Medium" target="_blank" rel="noopener"><i class="fa-brands fa-medium"></i></a></li>
+        <li><a href="https://youtube.com/@iamjimiejosh" aria-label="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="https://instagram.com/jimiejosh" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/jimiejoshpage" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="https://stackoverflow.com/users/8560668/folajimi-seye" aria-label="Stack Overflow" target="_blank" rel="noopener"><i class="fa-brands fa-stack-overflow"></i></a></li>
+        <li><a href="https://g.dev/seyefolajimi" aria-label="Google Dev" target="_blank" rel="noopener"><i class="fa-brands fa-google"></i></a></li>
+        <li><a href="https://about.me/seye.folajimi" aria-label="About.me" target="_blank" rel="noopener"><i class="fa-solid fa-user"></i></a></li>
+      </ul>
+
       <div class="cta-row">
         <a href="#contact" class="btn-primary">
           <i class="fa-solid fa-paper-plane"></i>
@@ -1205,60 +1291,108 @@
 
     <hr class="divider">
 
-    <!-- ======== FEATURED WORK ======== -->
-    <section class="section" id="work" aria-label="Featured work">
+    <!-- ======== FEATURED WORK / EXPERIENCE ======== -->
+    <section class="section" id="work" aria-label="Featured work and experience">
       <div class="container">
         <div class="reveal">
-          <span class="section-label">Portfolio</span>
-          <h2 class="section-title">Featured Work</h2>
-          <p class="section-desc">A selection of projects that showcase my approach to building impactful digital products.</p>
+          <span class="section-label">Experience</span>
+          <h2 class="section-title">Featured Work / Experience</h2>
+          <p class="section-desc">A timeline of my professional journey, leadership roles, and engineering contributions.</p>
         </div>
 
-        <div class="project-grid reveal-stagger">
-          <div class="project-card reveal" style="--i:0">
-            <h3>AI-Powered Analytics Platform</h3>
-            <p>End-to-end analytics platform with ML-driven insights, real-time dashboards, and automated reporting for enterprise clients.</p>
-            <div class="tag-row">
-              <span class="tag">Python</span>
-              <span class="tag">TensorFlow</span>
-              <span class="tag">React</span>
-              <span class="tag">GCP</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="text-link"><i class="fa-brands fa-github"></i> Code</a>
-              <a href="#" class="text-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-            </div>
-          </div>
-
-          <div class="project-card reveal" style="--i:1">
-            <h3>FinTech Payment Gateway</h3>
-            <p>Scalable payment infrastructure handling millions of transactions, with multi-currency support and fraud detection powered by AI.</p>
-            <div class="tag-row">
-              <span class="tag">Node.js</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Docker</span>
-              <span class="tag">AWS</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="text-link"><i class="fa-brands fa-github"></i> Code</a>
-              <a href="#" class="text-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+        <div class="experience-stack reveal-stagger">
+          
+          <!-- Moniepoint Group -->
+          <div class="experience-card reveal" style="--i:0">
+            <img src="logo_moniepoint.png" alt="Moniepoint Group Logo" class="experience-logo" loading="lazy">
+            <div class="experience-body">
+              <span class="experience-meta">Feb 2025 - Present · Lagos State, Nigeria</span>
+              <h3 class="experience-role">Backend Engineer</h3>
+              <div class="experience-company">Moniepoint Group</div>
+              <p>Design, develop, and optimize scalable backend systems powering financial transactions for millions of users. Build high-performance APIs and microservices, work with distributed databases and caching layers to maintain low-latency responses, and implement best practices for code quality, CI/CD, and cloud deployments.</p>
+              <div class="tag-row" style="margin-top: 1rem;">
+                <span class="tag">NodeJS</span>
+                <span class="tag">Backend Engineering</span>
+                <span class="tag">Microservices</span>
+                <span class="tag">Distributed Systems</span>
+                <span class="tag">Scalability</span>
+                <span class="tag">Fintech</span>
+              </div>
             </div>
           </div>
 
-          <div class="project-card reveal" style="--i:2">
-            <h3>DevOps Automation Toolkit</h3>
-            <p>Open-source CLI toolkit that automates infrastructure provisioning, deployment pipelines, and monitoring setup for startups.</p>
-            <div class="tag-row">
-              <span class="tag">Go</span>
-              <span class="tag">Terraform</span>
-              <span class="tag">Kubernetes</span>
-              <span class="tag">CI/CD</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="text-link"><i class="fa-brands fa-github"></i> Code</a>
-              <a href="#" class="text-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+          <!-- Play Information Technology -->
+          <div class="experience-card reveal" style="--i:1">
+            <img src="logo_playit.png" alt="Play Information Technology Logo" class="experience-logo" loading="lazy">
+            <div class="experience-body">
+              <span class="experience-meta">2019 - Jan 2024 · Lagos, Nigeria</span>
+              <h3 class="experience-role">Fullstack Game Developer / Co-Founder</h3>
+              <div class="experience-company">Play Information Technology (Play Inc. Games)</div>
+              <p>Co-founded and engineered gaming platforms, designing fullstack gameplay and multiplayer backend integrations for Play Inc. Games.</p>
+              <div class="tag-row" style="margin-top: 1rem;">
+                <span class="tag">Node.js</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Fullstack Game Dev</span>
+                <span class="tag">Graphics Design</span>
+                <span class="tag">Co-Founder</span>
+              </div>
             </div>
           </div>
+
+          <!-- Positive Group LTD -->
+          <div class="experience-card reveal" style="--i:2">
+            <img src="logo_positive.png" alt="Positive Group LTD Logo" class="experience-logo" loading="lazy">
+            <div class="experience-body">
+              <span class="experience-meta">Oct 2020 - Jan 2022 · London, United Kingdom (Remote)</span>
+              <h3 class="experience-role">Tech Lead / Founder / Director</h3>
+              <div class="experience-company">Positive Group LTD (Positive Online Industry)</div>
+              <p>Founded and led the technology division of Positive Group, building innovative fintech solutions and corporate software platforms (including custom portals for clients like Seplat Energy). Developed FastCV AI, a platform leveraging artificial intelligence to assist job seekers with resume and LinkedIn profile optimization.</p>
+              <div class="tag-row" style="margin-top: 1rem;">
+                <span class="tag">PHP</span>
+                <span class="tag">Artificial Intelligence</span>
+                <span class="tag">Product Strategy</span>
+                <span class="tag">DevOps</span>
+                <span class="tag">Technical Leadership</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seecure Space -->
+          <div class="experience-card reveal" style="--i:3">
+            <img src="logo_seecure.png" alt="Seecure Space Logo" class="experience-logo" loading="lazy">
+            <div class="experience-body">
+              <span class="experience-meta">2020 - 2020 · Kenya (Remote)</span>
+              <h3 class="experience-role">Technical Product Manager</h3>
+              <div class="experience-company">Seecure Space</div>
+              <p>Managed technical product design and execution for Seecure Space, a mental health technology platform serving users across Kenya and South Africa.</p>
+              <div class="tag-row" style="margin-top: 1rem;">
+                <span class="tag">Product Management</span>
+                <span class="tag">Agile Methodologies</span>
+                <span class="tag">Scrum</span>
+                <span class="tag">Project Planning</span>
+                <span class="tag">Cross-functional Leadership</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fullstack Developer / Consultant -->
+          <div class="experience-card reveal" style="--i:4">
+            <div class="experience-logo-placeholder"><i class="fa-solid fa-code"></i></div>
+            <div class="experience-body">
+              <span class="experience-meta">May 2020 - Sep 2021 · Singapore &amp; India (Remote)</span>
+              <h3 class="experience-role">Fullstack Developer / Consultant</h3>
+              <div class="experience-company">International Software Consulting</div>
+              <p>Collaborated on remote software development projects for international clients in the UK, USA, Singapore, and India (including front-end development in Mumbai), delivering high-performance web applications and integration architectures.</p>
+              <div class="tag-row" style="margin-top: 1rem;">
+                <span class="tag">TypeScript</span>
+                <span class="tag">React</span>
+                <span class="tag">Platform Integration</span>
+                <span class="tag">API Design</span>
+                <span class="tag">Software Development</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
