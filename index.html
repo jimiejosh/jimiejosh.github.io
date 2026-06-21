@@ -736,6 +736,45 @@
       box-shadow: 0 4px 12px rgba(0, 212, 170, 0.2);
     }
 
+    /* Nested roles timeline */
+    .roles-timeline {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: relative;
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--border);
+    }
+
+    .role-item {
+      position: relative;
+    }
+
+    .role-dot {
+      position: absolute;
+      left: calc(-1.5rem - 6px);
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--muted);
+      border: 2px solid var(--bg);
+      transition: background 250ms ease, transform 250ms ease, box-shadow 250ms ease;
+    }
+
+    .role-item:first-child .role-dot {
+      background: var(--accent);
+      left: calc(-1.5rem - 7px);
+      width: 12px;
+      height: 12px;
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    .experience-card:hover .role-item:first-child .role-dot {
+      transform: scale(1.15);
+    }
+
     @media (max-width: 576px) {
       .experience-card {
         flex-direction: column;
@@ -1328,15 +1367,44 @@
           <div class="experience-card reveal" style="--i:0">
             <img src="logo_moniepoint.png" alt="Moniepoint Group Logo" class="experience-logo" loading="lazy">
             <div class="experience-body">
-              <span class="experience-meta">Feb 2025 - Present · Lagos State, Nigeria</span>
-              <h3 class="experience-role">Backend Engineer</h3>
-              <div class="experience-company">Moniepoint Group</div>
-              <p>Design, develop, and optimize scalable backend systems powering financial transactions for millions of users. Build high-performance APIs and microservices, work with distributed databases and caching layers to maintain low-latency responses, and implement best practices for code quality, CI/CD, and cloud deployments.</p>
-              <div class="tag-row" style="margin-top: 1rem;">
+              <span class="experience-meta">Feb 2022 - Present · 4 yrs 5 mos · Remote</span>
+              <h3 class="experience-role" style="margin-bottom: 0.15rem;">Moniepoint Group</h3>
+              <div class="experience-company" style="margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--accent-light);">Financial Services</div>
+              
+              <!-- Roles timeline -->
+              <div class="roles-timeline">
+                
+                <!-- Backend Developer -->
+                <div class="role-item">
+                  <div class="role-dot"></div>
+                  <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--text);">Back End Developer</h4>
+                  <span style="font-size: 0.8rem; color: var(--muted); font-weight: 700;">Feb 2025 - Present · 1 yr 5 mos · Lagos State, Nigeria</span>
+                  <p style="margin-top: 0.4rem; font-size: 0.92rem; line-height: 1.6; color: var(--muted);">As a Backend Engineer at Moniepoint, I design, develop, and optimize scalable backend systems that power seamless financial transactions. My role involves: Building high-performance APIs and microservices to support millions of users, working with databases, caching, and distributed systems to maintain low-latency responses, and implementing best practices for code quality, CI/CD, and cloud deployments.</p>
+                </div>
+
+                <!-- Integration Engineer -->
+                <div class="role-item">
+                  <div class="role-dot"></div>
+                  <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--text);">Integration Engineer</h4>
+                  <span style="font-size: 0.8rem; color: var(--muted); font-weight: 700;">Apr 2023 - Present · 3 yrs 3 mos · Nigeria</span>
+                  <p style="margin-top: 0.4rem; font-size: 0.92rem; line-height: 1.6; color: var(--muted);">Orchestrate complex software integrations and API deployments, ensuring seamless connection of cutting-edge fintech technologies and client onboarding.</p>
+                </div>
+
+                <!-- Technical Product Specialist -->
+                <div class="role-item">
+                  <div class="role-dot"></div>
+                  <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--text);">Technical Product Specialist</h4>
+                  <span style="font-size: 0.8rem; color: var(--muted); font-weight: 700;">Feb 2022 - Apr 2023 · 1 yr 3 mos · Nigeria</span>
+                  <p style="margin-top: 0.4rem; font-size: 0.92rem; line-height: 1.6; color: var(--muted);">Assisted in product onboarding, technical solution scoping, and product optimizations to align fintech solutions with market demands.</p>
+                </div>
+
+              </div>
+
+              <div class="tag-row" style="margin-top: 1.5rem;">
                 <span class="tag">NodeJS</span>
                 <span class="tag">Backend Engineering</span>
                 <span class="tag">Microservices</span>
-                <span class="tag">Distributed Systems</span>
+                <span class="tag">Platform Integration</span>
                 <span class="tag">Scalability</span>
                 <span class="tag">Fintech</span>
               </div>
